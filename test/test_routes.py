@@ -21,7 +21,7 @@ def test_endpoint():
     url = '/endpoint'
 
     response = client.get(url)
-    assert response.get_data() == b'This is an endpoint!'
+    assert response.get_data() == b'This is an new endpoint!'
     assert response.status_code == 200
 
 
