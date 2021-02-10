@@ -10,6 +10,7 @@ node {
      myTestContainer.pull()
      myTestContainer.inside {
        sh 'python --version'
+       sh 'su root'
        sh 'whoami'
        sh 'ls -ltr /.local'
        sh 'pwd'
