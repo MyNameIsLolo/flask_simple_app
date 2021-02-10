@@ -13,6 +13,7 @@ node {
        sh 'pwd'
        sh 'pip install -r requirements.txt'
        sh 'pytest --version'
+       sh 'pytest -v'
      }
    } 
 }
