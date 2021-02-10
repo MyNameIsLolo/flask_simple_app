@@ -8,12 +8,10 @@ node {
    stage('test') {
      def myTestContainer = docker.image('python')
      myTestContainer.pull()
-     myTestContainer.inside {
+     myTestContainer.inside(-u root) {
        sh 'python --version'
        sh 'pwd'
-       sh 'apt update'
-       sh 'apt install sudo'
-       sh 'sudo pip install -r requirements.txt'
+       sh 'pip install -r requirements.txt'
        sh 'pytest --version'
      }
    } 
