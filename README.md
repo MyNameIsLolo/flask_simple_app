@@ -16,7 +16,7 @@ docker run -p 5000:5000 -d --name <container name> <repo>/flask_simple_app:<tag>
 ```
 
 ## Interact with the Flask app
-Get request example :
+GET request example :
 ```
 curl localhost:5000/endpoint
 ```
