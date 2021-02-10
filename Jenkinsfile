@@ -8,7 +8,7 @@ node {
    stage('test') {
      def myTestContainer = docker.image('python')
      myTestContainer.pull()
-     myTestContainer.inside(-u root) {
+     myTestContainer.inside('-u root') {
        sh 'python --version'
        sh 'pwd'
        sh 'pip install -r requirements.txt'
