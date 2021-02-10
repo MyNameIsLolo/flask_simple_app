@@ -11,6 +11,8 @@ node {
      myTestContainer.inside {
        sh 'python --version'
        sh 'pwd'
+       sh 'apt update'
+       sh 'apt install sudo'
        sh 'sudo pip install -r requirements.txt'
        sh 'pytest --version'
      }
