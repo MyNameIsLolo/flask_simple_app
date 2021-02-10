@@ -15,5 +15,10 @@ node {
        sh 'pytest --version'
        sh 'pytest -v'
      }
-   } 
-}
+   }                                     
+   stage('docker build/push') {            
+     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+       def app = docker.build("lniviere/docker-nodejs-demo:${commit_id}", '.').push()
+     }                                     
+   }                                       
+}  
