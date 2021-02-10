@@ -10,6 +10,9 @@ node {
      myTestContainer.pull()
      myTestContainer.inside {
        sh 'python --version'
+       sh 'pwd'
+       sh 'pip install -r requirements.txt'
+       sh 'pytest --version'
      }
    } 
 }
