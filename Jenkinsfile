@@ -10,11 +10,9 @@ node {
      myTestContainer.pull()
      myTestContainer.inside {
        sh 'python --version'
-       sh 'su root'
-       sh 'whoami'
        sh 'ls -ltr /.local'
        sh 'pwd'
-       sh 'pip install -r requirements.txt'
+       sh 'sudo pip install -r requirements.txt'
        sh 'pytest --version'
      }
    } 
