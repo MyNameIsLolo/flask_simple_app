@@ -16,7 +16,7 @@ node {
    stage('sonar-scanner') {
       def sonarqubeScannerHome = tool name: 'sonar', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
       withSonarQubeEnv('sonarqube_server') {
-        sh "${sonarqubeScannerHome}/bin/sonar-scanner"
+        sh "${sonarqubeScannerHome}/bin/sonar-scanner -Dsonar.projectName=flask_simple_app -Dsonar.projectVersion=${env.BUILD_NUMBER} -Dsonar.projectKey=FSA"
       }
     }                                  
    stage('docker build/push') {            
