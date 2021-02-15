@@ -1,6 +1,6 @@
 # Flask simple app
 
-This app is a Flask simple app for testing purpose !
+This app is a Flask simple app for testing purpose !!
 
 ## Jenkins pipeline
 The provided Jenkinsfile is for testing with Pytest and for building / pushing the Docker image to DockerHub
